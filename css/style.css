@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background:black url(http://fc01.deviantart.net/fs71/f/2012/160/b/9/stars_by_paulinemoss-d52un4e.jpg);
+    animation: stars 205s linear alternate;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+}
+
+/*Earth design*/
+#earth {
+    background:url(../images/earth.jpg);
+    background-size: auto 100%;
+    align-self: center;
+    border: 2px solid #000;
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+    animation: motion 5s linear 0s infinite;
+    box-shadow: 0 0 25px RGBA(255,255,255, 0.10),
+    -8px -8px 15px #000 inset,
+    2px 2px 25px #000 inset,
+    -45px -45px 25px RGBA(0,0,0, 0.5) inset,
+    25px 25px 45px RGBA(0,0,0, 0.45) inset;
+    margin: 6em auto;
+    transform: rotateX(6deg) rotateY(6deg) rotateZ(6deg);
+    transition: 1s;
+}
+
+@keyframes motion {
+    0% { background-position:0 0 }
+    100% { background-position: 1000px 0 }
+}
+
+@keyframes stars {
+    0% { background-position: 0 0 }
+    100% { background-position: 0 100% }
+}
+
+#earth:hover{
+    transform: rotateX(10deg) rotateY(10deg) rotateZ(10deg) scale(1.1);
+    transition: 1s;
+}
+#earth.centered{
+    transform: translate(25%, 75%)
+}
+
+#earth.offscreen {
+    transform: translateX(-100%) scale(0.8);
+    opacity: 0.5;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+/* Sun's design */
+
+#sun {
+    background:url(../images/sun.png);
+    background-size: auto 100%;
+    align-self: center;
+    position: fixed;
+    left: 100%;
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+    margin: 6em auto;
+    transition: 1s;
+}
+
+#sun:hover {
+    transform: rotateX(6deg) rotateY(6deg) rotateZ(6deg) scale(1.1);
+    transition: 1s;
+}
+
+#sun.centered {
+    transform: translate(-100%)
+}
