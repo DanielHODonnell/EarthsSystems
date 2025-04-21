@@ -59,21 +59,20 @@ body {
 }
 
 /* Sun's design */
-
 #sun {
     background:url(../images/sun.png);
     background-size: auto 100%;
     align-self: center;
     position: fixed;
-    left: 100%;
+    left: 80%;
     border-radius: 50%;
-    width: 500px;
-    height: 500px;
+    width: 1000px;
+    height: 1000px;
     margin: 6em auto;
     transition: 1s;
 }
 
-#sun:hover {
+#sun:hover:not(.animating):not(.centered) {
     transform: rotateX(6deg) rotateY(6deg) rotateZ(6deg) scale(1.1);
     transition: 1s;
 }
