@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    align-items: center;
+    background: url("../images/bg-system-view.jpg") no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+}
+
+.earth-btn {
+    font-size: 20px;
+    color: #ffffff;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, 1px 1px 0 black,
+    1px 1px 0 black;
+    background-image: url("../images/earth.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#sun {
+    background:url(../images/sun.png);
+    width: 500px;
+    height: 500px;
+    margin: 6em auto;
+    z-index: 10;
+}

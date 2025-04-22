@@ -1,0 +1,71 @@
+.cloud-wrapper {
+    position: relative;
+    display: block;
+    top: 100px;
+    left: 600px;
+    z-index: 1;
+}
+
+.clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 160px;
+    background-repeat: no-repeat;
+    background-position: 0px 50px, 40px 0px, 130px 30px, 170px 50px, 50px 70px;
+    background-size: 60px 50px, 120px 80px, 70px 50px, 90px 50px, 160px 30px;
+}
+
+.cloud-1 {
+    position: absolute;
+    top: -25px;
+    left: 50px;
+    background-image:
+            radial-gradient(circle 30px at 30px 30px, #a5a5a5 100%, transparent 0),
+            radial-gradient(circle 60px at 60px 60px, #a5a5a5 100%, transparent 0),
+            radial-gradient(circle 35px at 35px 35px, #a5a5a5 100%, transparent 0),
+            radial-gradient(circle 45px at 45px 45px, #a5a5a5 100%, transparent 0),
+            linear-gradient(#a5a5a5 50px, transparent 0);
+}
+
+.cloud-2 {
+    position: absolute;
+    left: 80px;
+    background-image:
+            radial-gradient(circle 30px at 30px 30px, #b0b0b0 100%, transparent 0),
+            radial-gradient(circle 60px at 60px 60px, #b0b0b0 100%, transparent 0),
+            radial-gradient(circle 35px at 35px 35px, #b0b0b0 100%, transparent 0),
+            radial-gradient(circle 45px at 45px 45px, #b0b0b0 100%, transparent 0),
+            linear-gradient(#b0b0b0 50px, transparent 0);
+}
+
+.cloud-3 {
+    background-image:
+            radial-gradient(circle 30px at 30px 30px, #c0c0c0 100%, transparent 0),
+            radial-gradient(circle 60px at 60px 60px, #c0c0c0 100%, transparent 0),
+            radial-gradient(circle 35px at 35px 35px, #c0c0c0 100%, transparent 0),
+            radial-gradient(circle 45px at 45px 45px, #c0c0c0 100%, transparent 0),
+            linear-gradient(#c0c0c0 50px, transparent 0);
+}
+
+.clouds::after {
+    position: absolute;
+    content: '';
+    top: 90px;
+    width: 1px;
+    height: 10px;
+    animation: raindrop 0.8s linear infinite;
+}
+
+@keyframes raindrop {
+    0% {
+        box-shadow: 35px 0 white, 70px 0 white, 105px 0 white, 140px 0 white, 175px 0 white, 210px 0 white, 235px 0 white;
+    }
+    50% {
+        box-shadow: 35px 20px white, 70px 60px transparent, 105px 30px transparent, 140px 70px transparent, 175px 40px white, 210px 60px transparent, 235px 80px transparent;
+    }
+    100% {
+        box-shadow: 35px 60px transparent, 70px 60px transparent, 105px 50px transparent, 140px 70px transparent, 175px 70px transparent, 210px 60px transparent, 235px 20px transparent;
+    }
+}

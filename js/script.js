@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
             setTimeout(() => {
                 document.body.classList.add('fade-out');
                 setTimeout(() => {
-                    window.location.href = "index.html";
+                    window.location.href = "systems-view.html";
                 }, 800);
             }, 1000);
         });
