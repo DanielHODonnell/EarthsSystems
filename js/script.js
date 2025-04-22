@@ -1,20 +1,17 @@
-const sun = document.getElementById('sun');
-const earth = document.getElementById('earth');
+document.addEventListener('DOMContentLoaded', function () {
+    const earthLink = document.getElementById('earth-link');
+    const earth = document.getElementById('earth');
 
-sun.addEventListener('click', function () {
-    const isCentered = sun.classList.contains('centered');
-
-    sun.classList.add('animating');
-
-    if (isCentered) {
-        sun.classList.remove('centered');
-        earth.classList.remove('offscreen');
-    } else {
-        sun.classList.add('centered');
-        earth.classList.add('offscreen');
+    if (earthLink && earth) {
+        earthLink.addEventListener('click', function (e) {
+            e.preventDefault();
+            earth.classList.add('zooming');
+            setTimeout(() => {
+                document.body.classList.add('fade-out');
+                setTimeout(() => {
+                    window.location.href = "index.html";
+                }, 800);
+            }, 1000);
+        });
     }
-
-    setTimeout(() => {
-        sun.classList.remove('animating');
-    }, 1000);
 });

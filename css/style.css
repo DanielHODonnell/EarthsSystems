@@ -1,12 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    background: url(http://fc01.deviantart.net/fs71/f/2012/160/b/9/stars_by_paulinemoss-d52un4e.jpg);
+    animation: stars 205s linear alternate;
+    min-height: 100vh;
+}
+
+.content {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
-    background:black url(http://fc01.deviantart.net/fs71/f/2012/160/b/9/stars_by_paulinemoss-d52un4e.jpg);
-    animation: stars 205s linear alternate;
+    min-height: calc(100vh - 80px);
+    flex-direction: column;
 }
 
 .container {
@@ -48,35 +55,34 @@ body {
     transform: rotateX(10deg) rotateY(10deg) rotateZ(10deg) scale(1.1);
     transition: 1s;
 }
-#earth.centered{
-    transform: translate(25%, 75%)
+
+#earth.zooming {
+    transform: scale(3) rotateX(10deg) rotateY(10deg) rotateZ(10deg);
+    transition: transform 3s ease-in-out;
+    z-index: 999;
 }
 
-#earth.offscreen {
-    transform: translateX(-100%) scale(0.8);
-    opacity: 0.5;
-    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+.navbar {
+    font-family: "Roboto Light", sans-serif;
+    font-size: 1.2rem;
+    background-color: transparent;
+    box-shadow: none;
+    padding: 1rem 0;
+    position: relative;
+    z-index: 10;
 }
 
-/* Sun's design */
-#sun {
-    background:url(../images/sun.png);
-    background-size: auto 100%;
-    align-self: center;
-    position: fixed;
-    left: 80%;
-    border-radius: 50%;
-    width: 1000px;
-    height: 1000px;
-    margin: 6em auto;
-    transition: 1s;
+.navbar-nav .nav-link {
+    margin: 0 1rem;
+    color: #a7afb0;
+    transition: color 0.3s ease;
 }
 
-#sun:hover:not(.animating):not(.centered) {
-    transform: rotateX(6deg) rotateY(6deg) rotateZ(6deg) scale(1.1);
-    transition: 1s;
+.navbar-nav .nav-link:hover {
+    color: #0d6efd;
 }
 
-#sun.centered {
-    transform: translate(-100%)
+body.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
 }
