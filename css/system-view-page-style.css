@@ -28,10 +28,53 @@ body {
     background-position: center;
 }
 
+.sun-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: auto;
+}
+
+.sun-container {
+    position: absolute;
+    top: 120px;
+}
+
 #sun {
-    background:url(../images/sun.png);
-    width: 500px;
-    height: 500px;
+    position: absolute;
+    background: url(../images/sun.png) no-repeat center;
+    background-size: auto 100%;
+    width: 100px;
+    height: 100px;
     margin: 6em auto;
-    z-index: 10;
+    top: -100px;
+    left: 1400px;
+    transform: rotateX(6deg) rotateY(6deg) rotateZ(6deg);
+    transition: transform 1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+}
+#sun:hover {
+    transform: rotateX(10deg) rotateY(10deg) rotateZ(10deg) scale(1.1);
+}
+
+.sun-text {
+    position: absolute;
+    left: -200%;
+    top: 50%;
+    transform: translateY(-50%) translateX(20px);
+    opacity: 0;
+    color: #FFD700;
+    font-weight: bold;
+    font-size: 1.2rem;
+    white-space: nowrap;
+    transition: all 0.5s ease-in-out;
+    pointer-events: none;
+}
+
+#sun:hover .sun-text {
+    transform: translateY(-50%) translateX(0);
+    opacity: 1;
 }
