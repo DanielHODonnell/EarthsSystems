@@ -1,8 +1,8 @@
 .cloud-wrapper {
     position: relative;
     display: block;
-    top: 100px;
-    left: 600px;
+    top: 11.1vh;     /* ~120px */
+    left: 41.7vw;    /* ~800px */
     z-index: 1;
 }
 
@@ -10,62 +10,93 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 300px;
-    height: 160px;
+    width: 18.2vw;   /* ~350px */
+    height: 18.5vh;  /* ~200px */
     background-repeat: no-repeat;
-    background-position: 0px 50px, 40px 0px, 130px 30px, 170px 50px, 50px 70px;
-    background-size: 60px 50px, 120px 80px, 70px 50px, 90px 50px, 160px 30px;
+    background-position:
+            0 4.6vh,           /* 0px 50px */
+            2.1vw 0,           /* 40px 0px */
+            6.8vw 2.8vh,         /* 130px 30px */
+            8.9vw 4.6vh,         /* 170px 50px */
+            2.6vw 6.5vh;         /* 50px 70px */
+    background-size:
+            3.1vw 4.6vh,         /* 60px 50px */
+            6.3vw 7.4vh,         /* 120px 80px */
+            3.6vw 4.6vh,         /* 70px 50px */
+            4.7vw 4.6vh,         /* 90px 50px */
+            8.3vw 2.8vh;         /* 160px 30px */
 }
 
 .cloud-1 {
     position: absolute;
-    top: -25px;
-    left: 50px;
+    top: -2.3vh;      /* ~-25px */
+    left: 2.6vw;      /* ~50px */
     background-image:
-            radial-gradient(circle 30px at 30px 30px, #a5a5a5 100%, transparent 0),
-            radial-gradient(circle 60px at 60px 60px, #a5a5a5 100%, transparent 0),
-            radial-gradient(circle 35px at 35px 35px, #a5a5a5 100%, transparent 0),
-            radial-gradient(circle 45px at 45px 45px, #a5a5a5 100%, transparent 0),
-            linear-gradient(#a5a5a5 50px, transparent 0);
+            radial-gradient(circle 1.6vw at 1.6vw 2.8vh, #a5a5a5 100%, transparent 0),
+            radial-gradient(circle 3.1vw at 3.1vw 5.6vh, #a5a5a5 100%, transparent 0),
+            radial-gradient(circle 1.8vw at 1.8vw 3.2vh, #a5a5a5 100%, transparent 0),
+            radial-gradient(circle 2.3vw at 2.3vw 4.2vh, #a5a5a5 100%, transparent 0),
+            linear-gradient(#a5a5a5 4.6vh, transparent 0);
 }
 
 .cloud-2 {
     position: absolute;
-    left: 80px;
+    left: 4.2vw;     /* ~80px */
     background-image:
-            radial-gradient(circle 30px at 30px 30px, #b0b0b0 100%, transparent 0),
-            radial-gradient(circle 60px at 60px 60px, #b0b0b0 100%, transparent 0),
-            radial-gradient(circle 35px at 35px 35px, #b0b0b0 100%, transparent 0),
-            radial-gradient(circle 45px at 45px 45px, #b0b0b0 100%, transparent 0),
-            linear-gradient(#b0b0b0 50px, transparent 0);
+            radial-gradient(circle 1.6vw at 1.6vw 2.8vh, #b0b0b0 100%, transparent 0),
+            radial-gradient(circle 3.1vw at 3.1vw 5.6vh, #b0b0b0 100%, transparent 0),
+            radial-gradient(circle 1.8vw at 1.8vw 3.2vh, #b0b0b0 100%, transparent 0),
+            radial-gradient(circle 2.3vw at 2.3vw 4.2vh, #b0b0b0 100%, transparent 0),
+            linear-gradient(#b0b0b0 4.6vh, transparent 0);
 }
 
 .cloud-3 {
     background-image:
-            radial-gradient(circle 30px at 30px 30px, #c0c0c0 100%, transparent 0),
-            radial-gradient(circle 60px at 60px 60px, #c0c0c0 100%, transparent 0),
-            radial-gradient(circle 35px at 35px 35px, #c0c0c0 100%, transparent 0),
-            radial-gradient(circle 45px at 45px 45px, #c0c0c0 100%, transparent 0),
-            linear-gradient(#c0c0c0 50px, transparent 0);
+            radial-gradient(circle 1.6vw at 1.6vw 2.8vh, #c0c0c0 100%, transparent 0),
+            radial-gradient(circle 3.1vw at 3.1vw 5.6vh, #c0c0c0 100%, transparent 0),
+            radial-gradient(circle 1.8vw at 1.8vw 3.2vh, #c0c0c0 100%, transparent 0),
+            radial-gradient(circle 2.3vw at 2.3vw 4.2vh, #c0c0c0 100%, transparent 0),
+            linear-gradient(#c0c0c0 4.6vh, transparent 0);
 }
 
 .clouds::after {
     position: absolute;
     content: '';
-    top: 90px;
-    width: 1px;
-    height: 10px;
+    top: 8.3vh;        /* ~90px */
+    width: 0.05vw;     /* ~1px */
+    height: 0.9vh;     /* ~10px */
     animation: raindrop 0.8s linear infinite;
 }
 
 @keyframes raindrop {
     0% {
-        box-shadow: 35px 0 white, 70px 0 white, 105px 0 white, 140px 0 white, 175px 0 white, 210px 0 white, 235px 0 white;
+        box-shadow:
+                1.8vw 0 white,
+                3.6vw 0 white,
+                5.5vw 0 white,
+                7.3vw 0 white,
+                9.1vw 0 white,
+                10.9vw 0 white,
+                12.2vw 0 white;
     }
     50% {
-        box-shadow: 35px 20px white, 70px 60px transparent, 105px 30px transparent, 140px 70px transparent, 175px 40px white, 210px 60px transparent, 235px 80px transparent;
+        box-shadow:
+                1.8vw 1.85vh white,
+                3.6vw 5.55vh transparent,
+                5.5vw 2.8vh transparent,
+                7.3vw 6.5vh transparent,
+                9.1vw 3.7vh white,
+                10.9vw 5.55vh transparent,
+                12.2vw 7.4vh transparent;
     }
     100% {
-        box-shadow: 35px 60px transparent, 70px 60px transparent, 105px 50px transparent, 140px 70px transparent, 175px 70px transparent, 210px 60px transparent, 235px 20px transparent;
+        box-shadow:
+                1.8vw 5.55vh transparent,
+                3.6vw 5.55vh transparent,
+                5.5vw 4.6vh transparent,
+                7.3vw 6.5vh transparent,
+                9.1vw 6.5vh transparent,
+                10.9vw 5.55vh transparent,
+                12.2vw 1.85vh transparent;
     }
 }

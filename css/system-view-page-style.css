@@ -10,7 +10,6 @@ body {
     align-items: center;
     background: url("../images/bg-system-view.jpg") no-repeat center center fixed;
     background-size: cover;
-    min-height: 100vh;
 }
 
 .container {
@@ -18,7 +17,21 @@ body {
     text-align: center;
 }
 
+.box {
+    background: red;
+    width: 5vw;
+    height: 10vh;
+    position: absolute;
+    top: 10vh;
+    left: 5vw;
+}
+
+.box:hover {
+    transform: scale(2);
+}
+
 .earth-btn {
+    position: absolute;
     font-size: 20px;
     color: #ffffff;
     text-shadow: -1px -1px 0 black, 1px -1px 0 black, 1px 1px 0 black,
@@ -48,12 +61,9 @@ body {
     height: 100px;
     margin: 6em auto;
     top: -100px;
-    left: 1400px;
+    left: 1700px;
     transform: rotateX(6deg) rotateY(6deg) rotateZ(6deg) scale(1);
     transition: transform 1s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     overflow: visible;
 }
 #sun:hover {
