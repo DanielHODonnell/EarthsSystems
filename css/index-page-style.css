@@ -78,11 +78,35 @@ body {
 
 .navbar-nav .nav-link {
     margin: 0 1rem;
-    color: #a7afb0;
     transition: color 0.3s ease;
 }
 
-.navbar-nav .nav-link:hover {
-    color: #0d6efd;
+.navbar-nav .nav-item:nth-child(1) .nav-link {
+    color: #7abea6; /* Red for Atmosphere */
 }
+.navbar-nav .nav-item:nth-child(1) .nav-link:hover {
+    color: #bcdad0;
+}
+
+.navbar-nav .nav-item:nth-child(2) .nav-link {
+    color: #346aa1; /* Blue for Hydrosphere */
+}
+.navbar-nav .nav-item:nth-child(2) .nav-link:hover {
+    color: #b5cde5;
+}
+
+.navbar-nav .nav-item:nth-child(3) .nav-link {
+    color: #7a5d1d; /* Teal for Geosphere */
+}
+.navbar-nav .nav-item:nth-child(3) .nav-link:hover {
+    color: #8a7d5b;
+}
+
+.navbar-nav .nav-item:nth-child(4) .nav-link {
+    color: #46731f; /* Orange for Biosphere */
+}
+.navbar-nav .nav-item:nth-child(4) .nav-link:hover {
+    color: #a9c094;
+}
+
 
